@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+   <title>Responsive Blog Website | Home</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+   <header>
+      <div class="container container-nav">
+         <div class="site-title">
+            <h1 class="heading">Living The Social Life</h1>
+            <p class="subtitle">A blog exporting minimalism in life</p>
+         </div>
+         <nav>
+            <ul>
+               <li><a href="" class="current-page">Home</a></li>
+               <li><a href="about.html">About me</a></li>
+               <li><a href="recent.html">Recent posts</a></li>
+               <li><a href="#" data-bs-target="#signup-modal" data-bs-toggle="modal">Sign Up</a></li>
+               <li><a href="#" data-bs-target="#login-modal" data-bs-toggle="modal">login</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+
+
+   <!-- login modal -->
+   <div class="modal" tabindex="-1" id="login-modal">
+      <div class="modal-dialog">
+         <div class="modal-content bg-body-secondary">
+            <div class="modal-header">
+               <h5 class="modal-title">login</h5>
+               <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+               </button>
+            </div>
+
+            <div class="modal-body">
+               <form action="/blog/login/" method="post"> <input type="hidden" name="csrfmiddlewaretoken"
+                     value="3iG8ywiv6Np8Yz9eTGZUpF6XjGNNi59JH7SdwpxFb9hrN7xtXTNPz4PBjTwGofpg">
+                  <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                  <div class="form-floating">
+                     <input type="login_username" class="form-control" id="login_username" placeholder="Username"
+                        name="login_username" required="">
+                     <label for="login_username" style="left: 0;">Username</label>
+                  </div>
+                  <div class="form-floating">
+                     <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+                        required="">
+                     <label for="password" style="left: 0;">Password</label>
+                  </div>
+
+                  <button class="btn btn-primary w-100 py-2 my-2" type="submit">Sign in</button>
+                  <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
+               </form>
+            </div>
+
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- sign-up modal -->
+   <div class="modal" tabindex="-1" id="signup-modal">
+      <div class="modal-dialog">
+         <div class="modal-content bg-body-secondary">
+            <div class="modal-header">
+               <h5 class="modal-title">Sign-Up</h5>
+               <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+               </button>
+            </div>
+
+            <div class="modal-body">
+               <form action="/blog/sign_up/" method="post"> <input type="hidden" name="csrfmiddlewaretoken"
+                     value="3iG8ywiv6Np8Yz9eTGZUpF6XjGNNi59JH7SdwpxFb9hrN7xtXTNPz4PBjTwGofpg">
+                  <h1 class="h3 mb-3 fw-normal">Create an account</h1>
+
+                  <div class="form-floating">
+                     <input type="text" class="form-control" name="username" id="username"
+                        placeholder="Try a unique one!" required="">
+                     <label for="username" class="mx-1">Username</label>
+                  </div>
+
+                  <div class="row">
+                     <div class="form-floating col-6">
+                        <input type="text" class="form-control" name="fname" id="fname"
+                           placeholder="Enter your first Name" required="">
+                        <label for="fname" class="mx-1">First Name</label>
+                     </div>
+
+                     <div class="form-floating col-6">
+                        <input type="text" class="form-control" name="lname" id="lname"
+                           placeholder="Enter your last Name" required="">
+                        <label for="lname" class="mx-1">Last Name</label>
+                     </div>
+                  </div>
+
+                  <div class="form-floating">
+                     <input type="email" class="form-control" id="eamil" placeholder="name@example.com" name="email"
+                        required="">
+                     <label for="eamil" class="mx-1">Email address</label>
+                  </div>
+
+                  <div class="row">
+                     <div class="form-floating col-6">
+                        <input type="password" class="form-control" id="pass1" placeholder="Password" name="pass1"
+                           required="">
+                        <label for="pass1" class="mx-1">Password</label>
+                     </div>
+                     <div class="form-floating col-6">
+                        <input type="password" class="form-control" id="pass2" placeholder="Password again" name="pass2"
+                           required="">
+                        <label for="pass2" class="mx-1">Re-enter Password</label>
+                     </div>
+                  </div>
+
+                  <div class="form-check text-start my-3">
+                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault"
+                        style="float: left;" name="check">
+                     <label class="form-check-label me-4" for="flexCheckDefault" style="float: left;">
+                        Remember me
+                     </label>
+                  </div>
+
+                  <button class="btn btn-primary w-100 py-2 mt-4" type="submit">Create</button>
+                  <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+               </form>
+            </div>
+
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+   <div class="container container-flex">
+
+      <main role="main">
+
+         <article class="article-featured">
+            <h2 class="article-title">Our Top Post</h2>
+            <p><b>The India</b></p>
+            <img src="img/taj_India.jpg" alt="greenery pic" class="article-image" style="height: 450px; width: 100%;">
+            <p class="article-info">July 23, 2019 | 3 comments</p>
+            <p class="article-body">In the early medieval era, Christianity, Islam, Judaism, and Zoroastrianism became established on
+               India's southern and western coasts.[47] Muslim armies from Central Asia intermittently overran
+               India's northern plains,[48] eventually founding the Delhi Sultanate, and drawing northern India
+               into the cosmopolitan networks of medieval Islam.[49] In the 15th century, the Vijayanagara Empire
+               created a long-lasting composite Hindu culture in south India.[50] In the Punjab, Sikhism emerged,
+               rejecting institutionalised religion.</p>
+            <a href="blog1.html" class="article-read-more">CONTINUE READING</a>
+         </article>
+
+         <article class="article-recent">
+            <div class="article-recent-main">
+               <h2 class="article-title">Good Food Good Life</h2>
+               <p class="article-body">Food is a very important part of everyone's life. If you want to be healthy, you
+                  have to eat healthy. One of the easiest way to do that is to keep your cooking nice and simple.</p>
+               <a href="blog2.html" class="article-read-more">CONTINUE READING</a>
+            </div>
+
+            <div class="article-recent-secondary">
+               <img src="img/food.jpg" alt="" class="article-image">
+               <p class="article-info">July 19, 2019 | 2 comments</p>
+            </div>
+         </article>
+
+         <article class="article-recent">
+            <div class="article-recent-main">
+               <h2 class="article-title">COVID-19</h2>
+               <p class="article-body">COVID‑19 transmits when infectious particles are breathed in or come into contact with the eyes, nose, or mouth. The risk is highest when people are in close proximity, but small airborne particles containing the virus can remain suspended in the air and travel over longer distances, particularly indoors.</p>
+               <a href="blog3.html" class="article-read-more">CONTINUE READING</a>
+            </div>
+
+            <div class="article-recent-secondary">
+               <img src="img/virus.jpg" alt="" class="article-image">
+               <p class="article-info">July 12, 2019 | 3 comments</p>
+            </div>
+         </article>
+
+         <article class="article-recent">
+            <div class="article-recent-main">
+               <h2 class="article-title">Inflation</h2>
+               <p class="article-body">In economics, inflation is an increase in the general price level of goods and services in an economy.[3][4][5][6] When the general price level rises, each unit of currency buys fewer goods and services; consequently, inflation corresponds to a reduction in the purchasing power of money.[7][8] The opposite of inflation is deflation, a decrease in the general price level of goods and services.</p>
+               <a href="blog4.html" class="article-read-more">CONTINUE READING</a>
+            </div>
+
+            <div class="article-recent-secondary">
+               <img src="img/inflation.jpg" alt="" class="article-image">
+               <p class="article-info">July 3, 2019 | 0 comments</p>
+            </div>
+         </article>
+
+
+
+      </main>
+
+      <aside class="sidebar">
+
+         <div class="sidebar-widget">
+            <h2 class="widget-title">ABOUT ME</h2>
+            <img src="img/about-me.jpg" alt="" class="widget-image">
+            <p class="widget-body">I find life better, and I'm happier, when things are nice and simple.</p>
+         </div>
+
+         <div class="sidebar-widget">
+            <h2 class="widget-title">RECENT POSTS</h2>
+
+            <div class="widget-recent-post">
+               <h3 class="widget-recent-post-title">Good Food Good Life</h3>
+               <img src="img/food.jpg" alt="" class="widget-image">
+            </div>
+
+            <div class="widget-recent-post">
+               <h3 class="widget-recent-post-title">COVID-19</h3>
+               <img src="img/virus.jpg" alt="" class="widget-image">
+            </div>
+
+            <div class="widget-recent-post">
+               <h3 class="widget-recent-post-title">Inflation</h3>
+               <img src="img/inflation.jpg" alt="" class="widget-image">
+            </div>
+
+         </div>
+
+      </aside>
+   </div>
+
+   <footer>
+      <p><strong>Living the simple life</strong></p>
+      <p>Copyright &copy; 2023</p>
+      <p>Made with <i class="fas fa-heart"></i> By Name&trade;</p>
+   </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

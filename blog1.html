@@ -1,0 +1,1084 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://connect.facebook.net/en_GB/sdk.js?hash=0928693d5eaab62894ed7e1c8b7fd1df" async=""
+        crossorigin="anonymous"></script>
+    <script async="" defer="" crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v17.0" nonce="QzAEkEGi"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>BlogPost</title>
+
+
+    <style>
+        #field textarea {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            border-bottom: 1px solid #ccc;
+            background: transparent;
+            resize: none;
+        }
+    </style>
+
+
+    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+    <style type="text/css"
+        data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">
+        .fb_hidden {
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+
+        .fb_reposition {
+            overflow: hidden;
+            position: relative
+        }
+
+        .fb_invisible {
+            display: none
+        }
+
+        .fb_reset {
+            background: none;
+            border: 0;
+            border-spacing: 0;
+            color: #000;
+            cursor: auto;
+            direction: ltr;
+            font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            overflow: visible;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            visibility: visible;
+            white-space: normal;
+            word-spacing: normal
+        }
+
+        .fb_reset>div {
+            overflow: hidden
+        }
+
+        @keyframes fb_transform {
+            from {
+                opacity: 0;
+                transform: scale(.95)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        .fb_animate {
+            animation: fb_transform .3s forwards
+        }
+
+        .fb_hidden {
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+
+        .fb_reposition {
+            overflow: hidden;
+            position: relative
+        }
+
+        .fb_invisible {
+            display: none
+        }
+
+        .fb_reset {
+            background: none;
+            border: 0;
+            border-spacing: 0;
+            color: #000;
+            cursor: auto;
+            direction: ltr;
+            font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            overflow: visible;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            visibility: visible;
+            white-space: normal;
+            word-spacing: normal
+        }
+
+        .fb_reset>div {
+            overflow: hidden
+        }
+
+        @keyframes fb_transform {
+            from {
+                opacity: 0;
+                transform: scale(.95)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        .fb_animate {
+            animation: fb_transform .3s forwards
+        }
+
+        .fb_dialog {
+            background: rgba(82, 82, 82, .7);
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+
+        .fb_dialog_advanced {
+            border-radius: 8px;
+            padding: 10px
+        }
+
+        .fb_dialog_content {
+            background: #fff;
+            color: #373737
+        }
+
+        .fb_dialog_close_icon {
+            background: url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+            cursor: pointer;
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 18px;
+            top: 17px;
+            width: 15px
+        }
+
+        .fb_dialog_mobile .fb_dialog_close_icon {
+            left: 5px;
+            right: auto;
+            top: 5px
+        }
+
+        .fb_dialog_padding {
+            background-color: transparent;
+            position: absolute;
+            width: 1px;
+            z-index: -1
+        }
+
+        .fb_dialog_close_icon:hover {
+            background: url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+        }
+
+        .fb_dialog_close_icon:active {
+            background: url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+        }
+
+        .fb_dialog_iframe {
+            line-height: 0
+        }
+
+        .fb_dialog_content .dialog_title {
+            background: #6d84b4;
+            border: 1px solid #365899;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0
+        }
+
+        .fb_dialog_content .dialog_title>span {
+            background: url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+            float: left;
+            padding: 5px 0 7px 26px
+        }
+
+        body.fb_hidden {
+            height: 100%;
+            left: 0;
+            margin: 0;
+            overflow: visible;
+            position: absolute;
+            top: -10000px;
+            transform: none;
+            width: 100%
+        }
+
+        .fb_dialog.fb_dialog_mobile.loading {
+            background: url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+            min-height: 100%;
+            min-width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: 10001
+        }
+
+        .fb_dialog.fb_dialog_mobile.loading.centered {
+            background: none;
+            height: auto;
+            min-height: initial;
+            min-width: initial;
+            width: auto
+        }
+
+        .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+            width: 100%
+        }
+
+        .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+            background: none
+        }
+
+        .loading.centered #fb_dialog_loader_close {
+            clear: both;
+            color: #fff;
+            display: block;
+            font-size: 18px;
+            padding-top: 20px
+        }
+
+        #fb-root #fb_dialog_ipad_overlay {
+            background: rgba(0, 0, 0, .4);
+            bottom: 0;
+            left: 0;
+            min-height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10000
+        }
+
+        #fb-root #fb_dialog_ipad_overlay.hidden {
+            display: none
+        }
+
+        .fb_dialog.fb_dialog_mobile.loading iframe {
+            visibility: hidden
+        }
+
+        .fb_dialog_mobile .fb_dialog_iframe {
+            position: sticky;
+            top: 0
+        }
+
+        .fb_dialog_content .dialog_header {
+            background: linear-gradient(from(#738aba), to(#2c4987));
+            border-bottom: 1px solid;
+            border-color: #043b87;
+            box-shadow: white 0 1px 1px -1px inset;
+            color: #fff;
+            font: bold 14px Helvetica, sans-serif;
+            text-overflow: ellipsis;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+            vertical-align: middle;
+            white-space: nowrap
+        }
+
+        .fb_dialog_content .dialog_header table {
+            height: 43px;
+            width: 100%
+        }
+
+        .fb_dialog_content .dialog_header td.header_left {
+            font-size: 12px;
+            padding-left: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+
+        .fb_dialog_content .dialog_header td.header_right {
+            font-size: 12px;
+            padding-right: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+
+        .fb_dialog_content .touchable_button {
+            background: linear-gradient(from(#4267B2), to(#2a4887));
+            background-clip: padding-box;
+            border: 1px solid #29487d;
+            border-radius: 3px;
+            display: inline-block;
+            line-height: 18px;
+            margin-top: 3px;
+            max-width: 85px;
+            padding: 4px 12px;
+            position: relative
+        }
+
+        .fb_dialog_content .dialog_header .touchable_button input {
+            background: none;
+            border: none;
+            color: #fff;
+            font: bold 12px Helvetica, sans-serif;
+            margin: 2px -12px;
+            padding: 2px 6px 3px 6px;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+
+        .fb_dialog_content .dialog_header .header_center {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            text-align: center;
+            vertical-align: middle
+        }
+
+        .fb_dialog_content .dialog_content {
+            background: url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+            border: 1px solid #4a4a4a;
+            border-bottom: 0;
+            border-top: 0;
+            height: 150px
+        }
+
+        .fb_dialog_content .dialog_footer {
+            background: #f5f6f7;
+            border: 1px solid #4a4a4a;
+            border-top-color: #ccc;
+            height: 40px
+        }
+
+        #fb_dialog_loader_close {
+            float: left
+        }
+
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+            visibility: hidden
+        }
+
+        #fb_dialog_loader_spinner {
+            animation: rotateSpinner 1.2s linear infinite;
+            background-color: transparent;
+            background-image: url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px
+        }
+
+        @keyframes rotateSpinner {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .fb_iframe_widget {
+            display: inline-block;
+            position: relative
+        }
+
+        .fb_iframe_widget span {
+            display: inline-block;
+            position: relative;
+            text-align: justify
+        }
+
+        .fb_iframe_widget iframe {
+            position: absolute
+        }
+
+        .fb_iframe_widget_fluid_desktop,
+        .fb_iframe_widget_fluid_desktop span,
+        .fb_iframe_widget_fluid_desktop iframe {
+            max-width: 100%
+        }
+
+        .fb_iframe_widget_fluid_desktop iframe {
+            min-width: 220px;
+            position: relative
+        }
+
+        .fb_iframe_widget_lift {
+            z-index: 1
+        }
+
+        .fb_iframe_widget_fluid {
+            display: inline
+        }
+
+        .fb_iframe_widget_fluid span {
+            width: 100%
+        }
+
+        .fb_mpn_mobile_landing_page_slide_out {
+            animation-duration: 200ms;
+            animation-name: fb_mpn_landing_page_slide_out;
+            transition-timing-function: ease-in
+        }
+
+        .fb_mpn_mobile_landing_page_slide_out_from_left {
+            animation-duration: 200ms;
+            animation-name: fb_mpn_landing_page_slide_out_from_left;
+            transition-timing-function: ease-in
+        }
+
+        .fb_mpn_mobile_landing_page_slide_up {
+            animation-duration: 500ms;
+            animation-name: fb_mpn_landing_page_slide_up;
+            transition-timing-function: ease-in
+        }
+
+        .fb_mpn_mobile_bounce_in {
+            animation-duration: 300ms;
+            animation-name: fb_mpn_bounce_in;
+            transition-timing-function: ease-in
+        }
+
+        .fb_mpn_mobile_bounce_out {
+            animation-duration: 300ms;
+            animation-name: fb_mpn_bounce_out;
+            transition-timing-function: ease-in
+        }
+
+        .fb_mpn_mobile_bounce_out_v2 {
+            animation-duration: 300ms;
+            animation-name: fb_mpn_fade_out;
+            transition-timing-function: ease-in
+        }
+
+        .fb_customer_chat_bounce_in_v2 {
+            animation-duration: 300ms;
+            animation-name: fb_bounce_in_v2;
+            transition-timing-function: ease-in
+        }
+
+        .fb_customer_chat_bounce_in_from_left {
+            animation-duration: 300ms;
+            animation-name: fb_bounce_in_from_left;
+            transition-timing-function: ease-in
+        }
+
+        .fb_customer_chat_bounce_out_v2 {
+            animation-duration: 300ms;
+            animation-name: fb_bounce_out_v2;
+            transition-timing-function: ease-in
+        }
+
+        .fb_customer_chat_bounce_out_from_left {
+            animation-duration: 300ms;
+            animation-name: fb_bounce_out_from_left;
+            transition-timing-function: ease-in
+        }
+
+        .fb_invisible_flow {
+            display: inherit;
+            height: 0;
+            overflow-x: hidden;
+            width: 0
+        }
+
+        @keyframes fb_mpn_landing_page_slide_out {
+            0% {
+                margin: 0 12px;
+                width: 100% - 24px
+            }
+
+            60% {
+                border-radius: 18px
+            }
+
+            100% {
+                border-radius: 50%;
+                margin: 0 24px;
+                width: 60px
+            }
+        }
+
+        @keyframes fb_mpn_landing_page_slide_out_from_left {
+            0% {
+                left: 12px;
+                width: 100% - 24px
+            }
+
+            60% {
+                border-radius: 18px
+            }
+
+            100% {
+                border-radius: 50%;
+                left: 12px;
+                width: 60px
+            }
+        }
+
+        @keyframes fb_mpn_landing_page_slide_up {
+            0% {
+                bottom: 0;
+                opacity: 0
+            }
+
+            100% {
+                bottom: 24px;
+                opacity: 1
+            }
+        }
+
+        @keyframes fb_mpn_bounce_in {
+            0% {
+                opacity: .5;
+                top: 100%
+            }
+
+            100% {
+                opacity: 1;
+                top: 0
+            }
+        }
+
+        @keyframes fb_mpn_fade_out {
+            0% {
+                bottom: 30px;
+                opacity: 1
+            }
+
+            100% {
+                bottom: 0;
+                opacity: 0
+            }
+        }
+
+        @keyframes fb_mpn_bounce_out {
+            0% {
+                opacity: 1;
+                top: 0
+            }
+
+            100% {
+                opacity: .5;
+                top: 100%
+            }
+        }
+
+        @keyframes fb_bounce_in_v2 {
+            0% {
+                opacity: 0;
+                transform: scale(0, 0);
+                transform-origin: bottom right
+            }
+
+            50% {
+                transform: scale(1.03, 1.03);
+                transform-origin: bottom right
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1, 1);
+                transform-origin: bottom right
+            }
+        }
+
+        @keyframes fb_bounce_in_from_left {
+            0% {
+                opacity: 0;
+                transform: scale(0, 0);
+                transform-origin: bottom left
+            }
+
+            50% {
+                transform: scale(1.03, 1.03);
+                transform-origin: bottom left
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1, 1);
+                transform-origin: bottom left
+            }
+        }
+
+        @keyframes fb_bounce_out_v2 {
+            0% {
+                opacity: 1;
+                transform: scale(1, 1);
+                transform-origin: bottom right
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0, 0);
+                transform-origin: bottom right
+            }
+        }
+
+        @keyframes fb_bounce_out_from_left {
+            0% {
+                opacity: 1;
+                transform: scale(1, 1);
+                transform-origin: bottom left
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0, 0);
+                transform-origin: bottom left
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            0% {
+                opacity: .1;
+                transform: translateY(100%)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes slideInFromBottomDelay {
+            0% {
+                opacity: 0;
+                transform: translateY(100%)
+            }
+
+            97% {
+                opacity: 0;
+                transform: translateY(100%)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container container-nav">
+           <div class="site-title">
+              <h1>Living The Social Life</h1>
+              <p class="subtitle">A blog exporting minimalism in life</p>
+           </div>
+           <nav>
+              <ul>
+                 <li><a href="index.html" class="current-page">Back to Home</a></li>
+
+              </ul>
+           </nav>
+        </div>
+     </header>
+
+
+
+
+
+    <article class="blog-post container my-5">
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-outline-success rounded-pill mb-4" onclick="window.location = 'index.html'">Go
+                    Back</button>
+
+                <h1 class="display-5 link-body-emphasis mb-1">India</h1>
+                <p class="blog-post-meta">July 7, 2023, by - <span class="text-primary">aditya</span>
+                    <span>(55 views)</span>
+                </p>
+
+                <div class="my-2 fb-like fb_iframe_widget" data-href="http://127.0.0.1:8000/blog/BlogPost/24"
+                    data-width="" data-layout="" data-action="" data-size="" data-share="true" fb-xfbml-state="rendered"
+                    fb-iframe-plugin-query="action=&amp;app_id=&amp;container_width=540&amp;href=http%3A%2F%2F127.0.0.1%3A8000%2Fblog%2FBlogPost%2F24&amp;layout=&amp;locale=en_GB&amp;sdk=joey&amp;share=true&amp;size=&amp;width=">
+                    <span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f1ec07cb9e46fec"
+                            width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin"
+                            title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true"
+                            allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                            src="https://www.facebook.com/v17.0/plugins/like.php?action=&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2b58c1537afcf8%26domain%3D127.0.0.1%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252F127.0.0.1%253A8000%252Ff296a8b0e2f241%26relation%3Dparent.parent&amp;container_width=540&amp;href=http%3A%2F%2F127.0.0.1%3A8000%2Fblog%2FBlogPost%2F24&amp;layout=&amp;locale=en_GB&amp;sdk=joey&amp;share=true&amp;size=&amp;width="
+                            style="border: none; visibility: visible; width: 450px; height: 28px;"
+                            class=""></iframe></span></div>
+
+                <p>In the early medieval era, Christianity, Islam, Judaism, and Zoroastrianism became established on
+                    India's southern and western coasts.[47] Muslim armies from Central Asia intermittently overran
+                    India's northern plains,[48] eventually founding the Delhi Sultanate, and drawing northern India
+                    into the cosmopolitan networks of medieval Islam.[49] In the 15th century, the Vijayanagara Empire
+                    created a long-lasting composite Hindu culture in south India.[50] In the Punjab, Sikhism emerged,
+                    rejecting institutionalised religion.[51] The Mughal Empire, in 1526, ushered in two centuries of
+                    relative peace,[52] leaving a legacy of luminous architecture.[l][53] Gradually expanding rule of
+                    the British East India Company followed, turning India into a colonial economy, but also
+                    consolidating its sovereignty.[54] British Crown rule began in 1858. The rights promised to Indians
+                    were granted slowly,[55][56] but technological changes were introduced, and modern ideas of
+                    education and the public life took root.[57] A pioneering and influential nationalist movement
+                    emerged, which was noted for nonviolent resistance and became the major factor in ending British
+                    rule.</p>
+                <hr>
+            </div>
+            <div class="col-6" style="display: flex; align-items: center; justify-content: center;">
+                <img src="img/taj.jpg" alt="" style="width: 450px; height: 300px;">
+            </div>
+        </div>
+
+        <h2><span id="Etymology" class="mw-headline">Etymology</span></h2>
+        <p>According to the&nbsp;<em><a title="Oxford English Dictionary"
+                    href="https://en.wikipedia.org/wiki/Oxford_English_Dictionary">Oxford English
+                    Dictionary</a></em>&nbsp;(third edition 2009), the name "India" is derived from the&nbsp;<a
+                title="Classical Latin" href="https://en.wikipedia.org/wiki/Classical_Latin">Classical
+                Latin</a>&nbsp;<em>India</em>, a reference to&nbsp;<a title="South Asia"
+                href="https://en.wikipedia.org/wiki/South_Asia">South Asia</a>&nbsp;and an uncertain region to its east;
+            and in turn derived successively from:&nbsp;<a class="mw-redirect" title="Hellenistic Greek"
+                href="https://en.wikipedia.org/wiki/Hellenistic_Greek">Hellenistic
+                Greek</a>&nbsp;<em>India</em>&nbsp;(<em>&nbsp;Ἰνδία</em>);&nbsp;<a title="Ancient Greek"
+                href="https://en.wikipedia.org/wiki/Ancient_Greek">ancient
+                Greek</a>&nbsp;<em>Indos</em>&nbsp;(<em>&nbsp;Ἰνδός</em>);&nbsp;<a title="Old Persian"
+                href="https://en.wikipedia.org/wiki/Old_Persian">Old Persian</a>&nbsp;<em><a title="Hindush"
+                    href="https://en.wikipedia.org/wiki/Hindush">Hindush</a></em>, an eastern province of the&nbsp;<a
+                title="Achaemenid Empire" href="https://en.wikipedia.org/wiki/Achaemenid_Empire">Achaemenid Empire</a>;
+            and ultimately its&nbsp;<a title="Cognate" href="https://en.wikipedia.org/wiki/Cognate">cognate</a>,
+            the&nbsp;<a title="Sanskrit"
+                href="https://en.wikipedia.org/wiki/Sanskrit">Sanskrit</a>&nbsp;<em>Sindhu</em>, or "river,"
+            specifically the&nbsp;<a title="Indus River" href="https://en.wikipedia.org/wiki/Indus_River">Indus
+                River</a>&nbsp;and, by implication, its well-settled southern basin.<sup id="cite_ref-88"
+                class="reference"><a href="https://en.wikipedia.org/wiki/India#cite_note-88">[76]</a></sup><sup
+                id="cite_ref-FOOTNOTEThieme1970447–450_89-0" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTEThieme1970447%E2%80%93450-89">[77]</a></sup>&nbsp;The&nbsp;<a
+                title="Ancient Greece" href="https://en.wikipedia.org/wiki/Ancient_Greece">ancient
+                Greeks</a>&nbsp;referred to the Indians as&nbsp;<em>Indoi</em>&nbsp;(<em><span class="plainlinks"><a
+                        class="external text"
+                        href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?code_ID="
+                        rel="nofollow">Ἰνδοί</a></span></em>), which translates as "The people of the Indus".<sup
+                id="cite_ref-FOOTNOTEKuiper201086_90-0" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTEKuiper201086-90">[78]</a></sup></p>
+        <p>The term&nbsp;<em><a title="Names for India"
+                    href="https://en.wikipedia.org/wiki/Names_for_India#Bh%C4%81rata">Bharat</a></em>&nbsp;(<span
+                title="ISO 15919 Indic (Hindi language) transliteration"><em
+                    lang="hi-Latn">Bhārat</em></span>;&nbsp;<small>pronounced&nbsp;</small><span class="IPA"
+                lang="und-Latn-fonipa" title="Representation in the International Phonetic Alphabet (IPA)"><a
+                    title="Help:IPA/Hindi and Urdu"
+                    href="https://en.wikipedia.org/wiki/Help:IPA/Hindi_and_Urdu">[ˈbʱaːɾət]</a></span>&nbsp;<span
+                class="nowrap">(<span class="unicode haudio"><span class="fn"><a title="About this sound"
+                            href="https://en.wikipedia.org/wiki/File:Hi-Bharat.ogg"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png"
+                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/17px-Loudspeaker.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/22px-Loudspeaker.svg.png 2x"
+                                alt="" width="11" height="11" data-file-width="20" data-file-height="20"></a><a
+                            class="internal" title="Hi-Bharat.ogg"
+                            href="https://upload.wikimedia.org/wikipedia/commons/7/79/Hi-Bharat.ogg">listen</a></span></span>)</span>),
+            mentioned in both&nbsp;<a title="Indian epic poetry"
+                href="https://en.wikipedia.org/wiki/Indian_epic_poetry">Indian epic poetry</a>&nbsp;and the&nbsp;<a
+                title="Constitution of India" href="https://en.wikipedia.org/wiki/Constitution_of_India">Constitution of
+                India</a>,<sup id="cite_ref-FOOTNOTEClémentin-Ojha2014_91-0" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTECl%C3%A9mentin-Ojha2014-91">[79]</a></sup><sup
+                id="cite_ref-92" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-92">[80]</a></sup>&nbsp;is used in its
+            variations by&nbsp;<a title="Names of India in its official languages"
+                href="https://en.wikipedia.org/wiki/Names_of_India_in_its_official_languages">many Indian languages</a>.
+            A modern rendering of the historical name&nbsp;<em>Bharatavarsha</em>, which applied originally to&nbsp;<a
+                title="North India" href="https://en.wikipedia.org/wiki/North_India">North India</a>,<sup
+                id="cite_ref-Jha2014_93-0" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-Jha2014-93">[81]</a></sup><sup
+                id="cite_ref-FOOTNOTESingh2017[httpsbooksgooglecombooksiddYM4DwAAQBAJpgPA253_253]_94-0"
+                class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTESingh2017[httpsbooksgooglecombooksiddYM4DwAAQBAJpgPA253_253]-94">[82]</a></sup>&nbsp;<em>Bharat</em>&nbsp;gained
+            increased currency from the mid-19th century as a native name for India.<sup
+                id="cite_ref-FOOTNOTEClémentin-Ojha2014_91-1" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTECl%C3%A9mentin-Ojha2014-91">[79]</a></sup><sup
+                id="cite_ref-FOOTNOTEBarrow2003_95-0" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTEBarrow2003-95">[83]</a></sup></p>
+        <p><em><a title="Hindustan"
+                    href="https://en.wikipedia.org/wiki/Hindustan">Hindustan</a></em>&nbsp;(<small></small><span
+                class="IPA" lang="und-Latn-fonipa"
+                title="Representation in the International Phonetic Alphabet (IPA)"><a title="Help:IPA/Hindi and Urdu"
+                    href="https://en.wikipedia.org/wiki/Help:IPA/Hindi_and_Urdu">[ɦɪndʊˈstaːn]</a></span>&nbsp;<span
+                class="nowrap">(<span class="unicode haudio"><span class="fn"><a title="About this sound"
+                            href="https://en.wikipedia.org/wiki/File:Hindustan.ogg"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png"
+                                srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/17px-Loudspeaker.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/22px-Loudspeaker.svg.png 2x"
+                                alt="" width="11" height="11" data-file-width="20" data-file-height="20"></a><a
+                            class="internal" title="Hindustan.ogg"
+                            href="https://upload.wikimedia.org/wikipedia/commons/4/46/Hindustan.ogg">listen</a></span></span>)</span>)
+            is a&nbsp;<a title="Middle Persian" href="https://en.wikipedia.org/wiki/Middle_Persian">Middle
+                Persian</a>&nbsp;name for India, introduced during the&nbsp;<a title="Mughal Empire"
+                href="https://en.wikipedia.org/wiki/Mughal_Empire">Mughal Empire</a>&nbsp;and used widely since. Its
+            meaning has varied, referring to a region encompassing present-day northern India and&nbsp;<a
+                title="Pakistan" href="https://en.wikipedia.org/wiki/Pakistan">Pakistan</a>&nbsp;or to India in its near
+            entirety.<sup id="cite_ref-FOOTNOTEClémentin-Ojha2014_91-2" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTECl%C3%A9mentin-Ojha2014-91">[79]</a></sup><sup
+                id="cite_ref-FOOTNOTEBarrow2003_95-1" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-FOOTNOTEBarrow2003-95">[83]</a></sup><sup
+                id="cite_ref-96" class="reference"><a
+                    href="https://en.wikipedia.org/wiki/India#cite_note-96">[84]</a></sup></p>
+
+        <h2>History</h2>
+        <p>By 55,000 years ago, the first modern humans, or Homo sapiens, had arrived on the Indian subcontinent from
+            Africa, where they had earlier evolved.[31][32][33] The earliest known modern human remains in South Asia
+            date to about 30,000 years ago.[31] After 6500 BCE, evidence for domestication of food crops and animals,
+            construction of permanent structures, and storage of agricultural surplus appeared in Mehrgarh and other
+            sites in Balochistan, Pakistan.[86] These gradually developed into the Indus Valley Civilisation,[87][86]
+            the first urban culture in South Asia,[88] which flourished during 2500–1900 BCE in Pakistan and western
+            India.[89] Centred around cities such as Mohenjo-daro, Harappa, Dholavira, and Kalibangan, and relying on
+            varied forms of subsistence, the civilisation engaged robustly in crafts production and wide-ranging
+            trade.[88] During the period 2000–500 BCE, many regions of the subcontinent transitioned from the
+            Chalcolithic cultures to the Iron Age ones.[90] The Vedas, the oldest scriptures associated with
+            Hinduism,[91] were composed during this period,[92] and historians have analysed these to posit a Vedic
+            culture in the Punjab region and the upper Gangetic Plain.[90] Most historians also consider this period to
+            have encompassed several waves of Indo-Aryan migration into the subcontinent from the north-west.[91] The
+            caste system, which created a hierarchy of priests, warriors, and free peasants, but which excluded
+            indigenous peoples by labelling their occupations impure, arose during this period.[93] On the Deccan
+            Plateau, archaeological evidence from this period suggests the existence of a chiefdom stage of political
+            organisation.[90] In South India, a progression to sedentary life is indicated by the large number of
+            megalithic monuments dating from this period,[94] as well as by nearby traces of agriculture, irrigation
+            tanks, and craft traditions.[94]</p>
+
+        <h3>Ancient India</h3>
+        <p>In the late Vedic period, around the 6th century BCE, the small states and chiefdoms of the Ganges Plain and
+            the north-western regions had consolidated into 16 major oligarchies and monarchies that were known as the
+            mahajanapadas.[95][96] The emerging urbanisation gave rise to non-Vedic religious movements, two of which
+            became independent religions. Jainism came into prominence during the life of its exemplar, Mahavira.[97]
+            Buddhism, based on the teachings of Gautama Buddha, attracted followers from all social classes excepting
+            the middle class; chronicling the life of the Buddha was central to the beginnings of recorded history in
+            India.[98][99][100] In an age of increasing urban wealth, both religions held up renunciation as an
+            ideal,[101] and both established long-lasting monastic traditions. Politically, by the 3rd century BCE, the
+            kingdom of Magadha had annexed or reduced other states to emerge as the Mauryan Empire.[102] The empire was
+            once thought to have controlled most of the subcontinent except the far south, but its core regions are now
+            thought to have been separated by large autonomous areas.[103][104] The Mauryan kings are known as much for
+            their empire-building and determined management of public life as for Ashoka's renunciation of militarism
+            and far-flung advocacy of the Buddhist dhamma.[105][106] The Sangam literature of the Tamil language reveals
+            that, between 200 BCE and 200 CE, the southern peninsula was ruled by the Cheras, the Cholas, and the
+            Pandyas, dynasties that traded extensively with the Roman Empire and with West and Southeast Asia.[107][108]
+            In North India, Hinduism asserted patriarchal control within the family, leading to increased subordination
+            of women.[109][102] By the 4th and 5th centuries, the Gupta Empire had created a complex system of
+            administration and taxation in the greater Ganges Plain; this system became a model for later Indian
+            kingdoms.[110][111] Under the Guptas, a renewed Hinduism based on devotion, rather than the management of
+            ritual, began to assert itself.[112] This renewal was reflected in a flowering of sculpture and
+            architecture, which found patrons among an urban elite.[111] Classical Sanskrit literature flowered as well,
+            and Indian science, astronomy, medicine, and mathematics made significant advances.[111]</p>
+
+        <h3>Modern India</h3>
+        <p>Historians consider India's modern age to have begun sometime between 1848 and 1885. The appointment in 1848
+            of Lord Dalhousie as Governor General of the East India Company set the stage for changes essential to a
+            modern state. These included the consolidation and demarcation of sovereignty, the surveillance of the
+            population, and the education of citizens. Technological changes—among them, railways, canals, and the
+            telegraph—were introduced not long after their introduction in Europe.[144][145][146][147] However,
+            disaffection with the company also grew during this time and set off the Indian Rebellion of 1857. Fed by
+            diverse resentments and perceptions, including invasive British-style social reforms, harsh land taxes, and
+            summary treatment of some rich landowners and princes, the rebellion rocked many regions of northern and
+            central India and shook the foundations of Company rule.[148][149] Although the rebellion was suppressed by
+            1858, it led to the dissolution of the East India Company and the direct administration of India by the
+            British government. Proclaiming a unitary state and a gradual but limited British-style parliamentary
+            system, the new rulers also protected princes and landed gentry as a feudal safeguard against future
+            unrest.[150][151] In the decades following, public life gradually emerged all over India, leading eventually
+            to the founding of the Indian National Congress in 1885.[152][153][154][155] The rush of technology and the
+            commercialisation of agriculture in the second half of the 19th century was marked by economic setbacks and
+            many small farmers became dependent on the whims of far-away markets.[156] There was an increase in the
+            number of large-scale famines,[157] and, despite the risks of infrastructure development borne by Indian
+            taxpayers, little industrial employment was generated for Indians.[158] There were also salutary effects:
+            commercial cropping, especially in the newly canalled Punjab, led to increased food production for internal
+            consumption.[159] The railway network provided critical famine relief,[160] notably reduced the cost of
+            moving goods,[160] and helped nascent Indian-owned industry.[159]</p>
+
+
+        <div class="row">
+            <div class="col-10 mt-4">
+                <button class="btn btn-outline-danger rounded-pill" id="prev" onclick="prev()">previous post</button>
+            </div>
+            <div class="col-2 mt-4">
+                <button class="btn btn-outline-danger rounded-pill" id="next" onclick="next()">next post</button>
+            </div>
+        </div>
+
+    </article>
+
+    <div class="container">
+        <h5 class="ml-3">2 Comments</h5>
+
+
+        <p class="ml-4 mb-5">Login to add comments.</p>
+
+
+
+
+        <div class="row">
+            <div class="col-md-1"><img class="w-100 px-2" style="border-radius: 50%;" src="img/user2.png" alt="">
+            </div>
+
+            <div class="col-md-5" style="border-bottom: 1px solid #ccc;">
+                <p class="mb-4"><b>aditya </b>
+                    <span class="badge bg-secondary text-light"> 4&nbsp;months, 1&nbsp;week ago</span>
+                </p>
+                here we go
+            </div>
+        </div>
+
+        <div class="row ml-5 mb-5">
+            <div class="col-md-6 ml-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsible-27">
+                            <b>1 replies</b>
+                        </a>
+
+                        <div class="collapse" id="collapsible-27">
+                            <!-- <p class="ml-3 mb-1">(1 replies)</p> -->
+
+
+                            <p class="ml-3 mb-4"><b>Login to reply!</b></p>
+
+
+
+
+
+                            <div class="row mb-4 mx-0">
+                                <div class="col-md-2"><img class="w-50 ml-4" style="border-radius: 50%;"
+                                        src="img/user2.png" alt=""></div>
+
+                                <div class="col-md-10" style="border-bottom: 1px solid #ccc;">
+                                    <p class="mb-2"><b>aditya </b>
+                                        <span class="badge bg-secondary text-light"> 4&nbsp;months, 1&nbsp;week
+                                            ago</span>
+                                    </p>
+                                    kakjgbdj jkasdnj fjadsg
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"><img class="w-100 px-2" style="border-radius: 50%;" src="img/user2.png" alt="">
+            </div>
+
+            <div class="col-md-5" style="border-bottom: 1px solid #ccc;">
+                <p class="mb-4"><b>aditya </b>
+                    <span class="badge bg-secondary text-light"> 4&nbsp;months, 1&nbsp;week ago</span>
+                </p>
+                jajdjklag dsa
+            </div>
+        </div>
+
+        <div class="row ml-5 mb-5">
+            <div class="col-md-6 ml-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsible-29">
+                            <b>0 replies</b>
+                        </a>
+
+                        <div class="collapse" id="collapsible-29">
+                            <!-- <p class="ml-3 mb-1">(0 replies)</p> -->
+
+
+                            <p class="ml-3 mb-4"><b>Login to reply!</b></p>
+
+                       </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer class="pt-5 pb-4 text-center text-body-secondary bg-body-tertiary mt-5">
+        <p>@webcart - All rights reserved.</p>
+        <p class="mb-0">
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+
+
+        // Try this using slug instead of id...
+        function next() {
+            window.location = `blog2.html`
+        }
+
+        function prev() {
+            alert("No previous posts available!");
+        }
+
+    </script>
+
+
+
+
+
+    <div id="fb-root" class=" fb_reset">
+        <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+            <div></div>
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
